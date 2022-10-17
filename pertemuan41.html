@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Halaman Utama</h1>
+    <button id="stop">stop</button>
+
+    <script>
+
+        h1Data = document.querySelector("h1");
+        stopData = document.getElementById("stop");
+        // function stop(){
+        //     if(h1Data.style.color === "red"){
+        //         h1Data.style.color = "yellow";
+        //     }else{
+        //         h1Data.style.color = "red";
+        //     }
+        // }
+
+        function cek(){
+            if(h1Data.style.color === "red"){
+                h1Data.style.color = "blue";
+            }else{
+                h1Data.style.color = "red";
+            }
+            // var myDate = new Date();
+
+            // var jam = myDate.getHours();
+            // var menit = myDate.getMinutes();
+            // var detik = myDate.getSeconds();
+
+            // h1Data.innerHTML = "waktu saat ini adalah " + jam + " : " + menit + " : " + detik;
+            // // h1Data.innerHTML = new Date();
+        }
+        // cek();
+        var setIntervalData = setInterval(cek, 200)
+        stopData.addEventListener("click",function(){
+            clearInterval(setIntervalData)
+        })
+
+      
+    </script>
+    
+</body>
+</html>

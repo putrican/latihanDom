@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,h2,div{
+            border: 2 px solid black;
+            width: 280px;
+            padding: 10px;
+            color: red;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="judul">Halaman utama</h1>
+    <h2 id="judul2">Halaman content</h2>
+    <div id="data">Halaman Footer</div>
+    <p id="muncul"></p>
+    
+
+    <script>
+        var h1Data = document.getElementById("judul");
+        var h2Data = document.getElementById("judul2");
+        var divData = document.getElementById("data");
+        var pData = document.getElementById("muncul");
+
+        function tampilkan(a){
+            var warna = a.target.getAttribute("id");
+            if(warna == "judul"){
+                a.target.style.backgroundColor = "grey";
+            }else if(warna == "judul2"){
+                a.target.style.backgroundColor = "pink";
+            }else if(warna == "data"){
+                a.target.style.backgroundColor = "blue";
+            }
+        }
+
+
+
+        h1Data.addEventListener("click",tampilkan);
+        h2Data.addEventListener("click",tampilkan);
+        divData.addEventListener("click",tampilkan);
+
+    </script>
+</body>
+</html>

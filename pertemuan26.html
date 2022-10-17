@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            background-color: grey;
+            padding: 5px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="proses.php" method="GET" name="formku" id="formku" target="_self" enctype="multipart/form-data" accept="utf-8">
+        <p>Username : <input type="text" name="username" id="username"></p>
+
+        <p><input type="checkbox" name="js" id="js" value="belajar">Belajar</p>
+
+        <p><input type="submit" name="submit" id="submit" value="kirim"></p>
+
+        <p>
+            <span id="spanSubmit">kirim Data</span>
+            <span id="spanReset">Reset Data</span>
+        </p>
+
+
+
+
+        
+    </form>
+
+    <script>
+        var formData = document.getElementById("formku");
+        var spanDataSubmit = document.getElementById("spanSubmit");
+        var spanDataReset = document.getElementById("spanReset");
+        
+
+        function fungsiSubmit(){
+            formData.submit();
+        }
+        function fungsiReset(){
+            formData.reset();
+        }
+        spanDataSubmit.addEventListener("click",fungsiSubmit);
+        spanDataReset.addEventListener("click",fungsiReset);
+
+        // var formData = document.getElementById("formku");
+        // console.log(formData.elements)
+        // console.log(formData.length)
+        // console.log(formData.name)
+        // console.log(formData.method)
+        // console.log(formData.target)
+
+
+        // var formData = document.forms[0];
+        // var usernameData = document.forms[0][0];
+        // var jsData = document.forms[0][1];
+        // var submitData = document.forms[0][2];
+
+        // console.log(formData);
+        // console.log(usernameData);
+        // console.log(jsData);
+        // console.log(submitData);
+
+    </script>
+    
+</body>
+</html>

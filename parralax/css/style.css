@@ -1,0 +1,41 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+h2{
+    font-size: 80px;
+    background: burlywood;
+    padding: 8 px 24px;
+    border-radius: 16px;
+}
+div:nth-child(1){
+    height: 400px;
+    background-image: url(../img/gambar0.jpg);
+    background-size: cover;
+}
+div:nth-child(2){
+    height: 400px;
+    background-image: url(../img/gambar1.jpg);
+    background-size: cover;
+
+}
+div:nth-child(3){
+    height: 400px;
+    background-image: url(../img/gambar2.jpg);
+    background-size: cover;
+}
+div:nth-child(4){
+    height: 400px;
+    background-image: url(../img/gambar3.jpg);
+    background-size: cover;
+}

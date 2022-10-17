@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Halaman Utama</h1>
+    <p>Jumlah alamat history : <span id=hasil></span></p>
+    <button id="back">Back</button>
+    <button id="forward">Fordward</button>
+    <button id="back2">Back 2 kali</button>
+
+
+    <script>
+        var hasilData = document.getElementById("hasil");
+        var backData = document.getElementById("back");
+        var forwardData = document.getElementById("fordward");
+        var back2Data = document.getElementById("back2");
+
+        hasilData.innerHTML = history.length;
+
+
+        backData.addEventListener("click", function(){
+            history.back()
+        })
+        forwardData.addEventListener("click", function(){
+            history.forward()
+        })
+        back2Data.addEventListener("click", function(){
+            history.go(-2);
+        })
+    </script>
+    <!-- <p>Pilih Website Anda : </p>
+    <select onchange="location = this.value">
+        <option value="">-- Daftar Website--</option>
+        <option value="http://www.geogle.com">Geogle</option>
+        <option value="http://www.facebook.com">Facebook</option>
+        <option value="http://www.instagram.com">Instagram</option>
+    </select> -->
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 10px auto;
+            width: 400px;
+            height: 400px;
+            display: block;
+            border: 6px solid white;
+            box-shadow: 0px 0px 10px black;
+        }
+        p{
+            text-align: center;
+            width: 400px;
+            margin: 10px auto;
+        }
+        #prev{
+            float: left;
+        }
+        #next{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="data">
+        <a href="http://www.geogle.com" id="linkshow" >
+            <img src="img/gambar0.jpg" id="slideshow" alt="gambar" width="400" height="400">
+        </a>
+    </div>
+    <p>
+        <button id="start">Start Slide</button>
+        <button id="stop">Stop Slide</button>
+        <button id="prev"><<<Preview</button>
+        <button id="next">Next>></button>
+    </p>
+
+    <script>
+        var slideshowData = document.getElementById("slideshow");
+        var linkshowData = document.getElementById("linkshow");
+        var startData = document.getElementById("start");
+        var stopData = document.getElementById("stop");
+        var prevData = document.getElementById("prev");
+        var nextData = document.getElementById("next");
+
+        var arrayGambar = ["img/gambar0.jpg","img/gambar1.jpg","img/gambar2.jpg","img/gambar3.jpg","img/gambar4.jpg"];
+        var arrayLink = ["http://www.geogle.com","http://www.facebook.com","http://www.twiter.com","http://www.instagram.com","http://www.wikipedia.com"];
+        var counter = 0;
+        var intervalData = 0;
+
+        function nextSlideShow(){
+            counter++;
+            if(counter === 5){
+                counter = 0;
+            }
+            slideshowData.setAttribute("src",arrayGambar[counter]);
+            linkshowData.setAttribute("href",arrayLink[counter]);
+
+        }
+        function prevSlideShow(){
+            counter--;
+            if(counter === -1){
+                counter = 4;
+            }
+            slideshowData.setAttribute("src",arrayGambar[counter]);
+            linkshowData.setAttribute("link",arrayLink[counter]);
+        }
+        function startSlideShow(){
+            if(intervalData === 0){
+                intervalData = setInterval(nextSlideShow,2000);
+            }
+        }
+        function stopSlideShow(){
+            clearInterval(intervalData);
+            intervalData = 0;
+        }
+            
+        
+
+
+        prevData.addEventListener("click", prevSlideShow);
+        nextData.addEventListener("click", nextSlideShow);
+        startData.addEventListener("click",startSlideShow);
+        stopData.addEventListener("click",stopSlideShow);
+
+    </script>
+</body>
+</html>

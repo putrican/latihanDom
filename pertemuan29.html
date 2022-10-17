@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Username : <input type="text" name="username" id="username"></p>
+    <p>Email : <input type="text" name="email" id="email"></p>
+    <p>Jalankan : <button id="focusU">Fokus ke username</button>
+    <button id="focusE">Fokus ke email</button></p>
+    
+    
+    <script>
+        var usernameData = document.getElementById("username");
+        var emailData = document.getElementById("email");
+
+        
+
+        function diFocus(e){
+            e.target.style.border = "2px solid green";
+        }
+        function diBlur(e){
+            e.target.style.border = "2px solid blue";
+        }
+        
+        usernameData.addEventListener("focus", diFocus);
+        emailData.addEventListener("focus", diFocus);
+        usernameData.addEventListener("blur", diBlur);
+        emailData.addEventListener("blur", diBlur);
+
+
+        var focusUdata = document.getElementById("focusU");
+        var focusEdata = document.getElementById("focusE");
+
+        console.log(focusUdata)
+         console.log(focusEdata)
+
+        focusUdata.addEventListener("click", function(){
+            usernameData.focus();
+        })
+        focusEdata.addEventListener("click", function(){
+            emailData.focus();
+        })
+    </script>
+</body>
+</html>

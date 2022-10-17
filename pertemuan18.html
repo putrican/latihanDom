@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            border: 2px solid black;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            color: red;
+            background-color: blue;
+
+
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <!-- <h1 onclick="document.querySelector('p').innerHTML='ini halaman contact'">Halaman utama</h1> -->
+    <h1 onclick="tampilkan()">Halaman utama</h1>
+    <p></p>
+    <!-- <h1 ondblclick='console.log("klik dua kali muncul")'>Halaman content</h1>
+    <h1 oncontextmenu='concole.log("klik kanan muncul")'>Halaman content 2</h1>
+    <h1 onmouseover='console.log("ketika kursor nya mengarah")'>Halaman footer</h1> -->
+
+    <script>
+        function tampilkan(){
+            document.querySelector("p").innerHTML="Halo selamat datang"
+        }
+    </script>
+
+   
+
+    
+</body>
+</html>

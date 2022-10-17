@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink{
+            background-color: pink;
+        }
+        .merah{
+            color: red;
+        }
+        .ubah{
+            border: 2px solid black;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="judul" class="merah pink">halaman utama</h1>
+    
+    <script>
+        var h1Data = document.getElementById("judul");
+        h1Data.className += "ubah";
+        console.log(h1Data.className)
+        // console.log(namaClass)
+        // h1Data.className = namaClass + " ubah ";
+        // console.log(h1Data.className)
+
+        // h1Data.className = "ubah";
+        // console.log(h1Data.className)
+        // h1Data.className = "pink";
+        // console.log(h1Data.className)
+    </script>
+    
+</body>
+</html>

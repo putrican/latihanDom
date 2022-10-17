@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>Ketikkan disini : <textarea name="ketik" id="ketik" cols="30" rows="10"></textarea></p>
+    <p>Hasil : <span id="hasil"></span></p> -->
+
+    <p>Nama Kota : <input type="text" id="namaKota"></p>
+    <p><button id="tambahKota">Tambah</button></p>
+    <p><textarea name="daftarKota" id="daftarKota"></textarea></p>
+
+    <script>
+        var namaKotaData = document.getElementById("namaKota");
+        var tambahKotaData = document.getElementById("tambahKota");
+        var daftarKotaData = document.getElementById("daftarKota");
+
+
+        function diTambahKota(){
+            var namaKotaSekarang = namaKotaData.value + "\n";
+            var daftarKotaSekarang = daftarKotaData.value;
+            daftarKotaData.value = daftarKotaSekarang + namaKotaSekarang;
+            namaKotaData.value = "";
+            namaKotaData.focus();
+        }
+
+        tambahKotaData.addEventListener("click",diTambahKota)
+        // var ketikData = document.getElementById("ketik");
+        // var hasilData = document.getElementById("hasil");
+
+        // function diProses(){
+        //     hasilData.innerHTML = ketikData.value;
+        // }
+        // ketikData.addEventListener("keyup", diProses)
+    </script>
+</body>
+</html>

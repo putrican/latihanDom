@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Belajar javascript</h1>
+    <p>Asiknya <em>belajar</em> <b>javascript</b></p>
+
+<script>
+    var dataNode = document.childNodes[1].childNodes[2]; 
+    var h1Node = dataNode.childNodes[1];
+    var pNode = dataNode.childNodes[3];
+    var emNode = pNode.childNodes[1]; 
+    var bNode = pNode.childNodes[2];
+
+    // dataNode.removeChild(h1Node)
+
+    // var deleteNode = dataNode.removeChild(h1Node);
+    // dataNode.appendChild(deleteNode)
+
+    var duplikath1 = h1Node.cloneNode(true);
+    dataNode.appendChild(duplikath1)
+
+
+
+</script>
+</body>
+</html>

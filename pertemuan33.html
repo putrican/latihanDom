@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>
+        Belajar :
+        <!-- <input type="checkbox" id="belajarHTML" value="HTML"> HTML
+        <input type="checkbox" id="belajarCSS" value="CSS"> CSS
+        <input type="checkbox" id="belajarJS" value="Javascript"> javascript -->
+
+
+        <input type="radio" name="belajar" id="belajarHTML" value="HTML"> HTML
+        <input type="radio" name="belajar" id="belajarCSS" value="CSS"> CSS
+        <input type="radio" name="belajar" id="belajarJS" value="Javascript"> javascript
+    </p>
+    <p><button id="check">Check</button></p>
+    <p>Hasil : <span id="hasil"></span></p>
+
+    <script>
+        var belajarHTMLData = document.getElementById("belajarHTML");
+        var belajarCSSData = document.getElementById("belajarCSS");
+        var belajarJSData = document.getElementById("belajarJS");
+        var checkData = document.getElementById("check");
+        var hasilData = document.getElementById("hasil");
+
+        function diPeriksa(){
+            hasilData.innerText = "";
+
+            if(belajarHTMLData.checked){
+                hasilData.innerHTML += belajarHTMLData.value + " ";
+            }
+            
+            if(belajarCSSData.checked){
+                hasilData.innerHTML += belajarCSSData.value + " ";
+            }
+            
+            if(belajarJSData.checked){
+                hasilData.innerHTML += belajarJSData.value + " ";
+            }
+        }
+        checkData.addEventListener("click", diPeriksa)
+    </script>
+</body>
+</html>

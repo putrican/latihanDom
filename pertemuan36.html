@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            background-color: blue;
+            border: 2px solid red;
+            width: 300px;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p id="pesan"></p>
+    <form action="proses.php" id="formKu" name="formKu">
+        <p>Username : <input type="text" name="username" id="username"></p>
+        <p><input type="submit" name="submit" id="submit" value="Kirim"></p>
+    </form>
+
+    <script>
+        var pesanData = document.getElementById("pesan");
+        var formData = document.getElementById("formKu");
+        var usernameData = document.getElementById("username");
+
+        function diProses(e){
+            if(usernameData.value.trim() === ""){
+                pesanData.innerHTML = "Username harus di isi";
+                pesanData.className = "error"
+                e.preventDefault();
+            }
+            else if(/\W/.test(usernameData.value.trim())){
+                pesanData.innerHTML = "Hanya bisa di isi karakter alfanumerik";
+                pesanData.className = "error";
+                e.preventDefault()
+            }
+        }
+        formData.addEventListener("submit",diProses)
+    </script>
+    
+</body>
+</html>

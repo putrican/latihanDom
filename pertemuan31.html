@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p>Ketik disini : <input type="text" id="ketik"></p>
+    <p>jumlah huruf 'a' : <span id="hasilA"></span></p>
+    <p>jumlah huruf 'e' : <span id="hasilE"></span></p> -->
+
+    <p>Password : <input type="password" id="password"></p>
+    <p><button id="tombol">Tampilkan Password</button></p>
+
+
+    <script>
+        var passwordData = document.getElementById("password");
+        var tombolData = document.getElementById("tombol");
+
+        function proses(){
+            passwordData.type = "text";
+        }
+
+        tombolData.addEventListener("click",proses)
+
+        // var ketikData = document.getElementById("ketik");
+        // var hasilDataA = document.getElementById("hasilA");
+        // var hasilDataE = document.getElementById("hasilE");
+
+        // var jumlahA = 0;
+        // var jumlahE = 0;
+
+        // function check(e){
+        //     if(e.key == "a"){
+        //         jumlahA++;
+        //         hasilDataA.innerHTML = jumlahA;
+        //     }
+        //     if(e.key == 'e'){
+        //         jumlahE++;
+        //         hasilDataE.innerText = jumlahE;
+        //     }
+        // }
+
+        // ketikData.addEventListener("keypress", check)
+    </script>
+</body>
+</html>

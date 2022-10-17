@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Halaman utama</h1>
+    <select id="daftarWebsite">
+        <option value="geogle">Geogle</option>
+        <option value="facebook">Facebook</option>
+        <option value="twiter">Twiter</option>
+        <option value="instagram">Instagram</option>
+        
+    </select>
+    <button id="tombol">Check</button>
+
+    <!-- <button id="tombolAssign">Assign</button>
+    <button id="tombolReload">Reload</button>
+    <button id="tombolReplace">Replace</button> -->
+
+    <script>
+        var tombolData = document.getElementById("tombol");
+        var daftarWebsiteData = document.getElementById("daftarWebsite");
+
+        function pilihWebsite(){
+            var namaWebsite = daftarWebsiteData.value;
+            switch(namaWebsite){
+                case("geogle"):
+                window.location = "http://www.geogle.com";
+                break;
+                case("facebook"):
+                window.location = "http://www.facebook.com";
+                break;
+                case("twiter"):
+                window.location = "http://www.twiter.com";
+                break;
+                case("instagram"):
+                window.location = "http://www.instagram.com";
+                break;
+            }
+        }
+
+        tombolData.addEventListener("click", pilihWebsite)
+        // var tombolAssignData = document.getElementById("tombolAssign");
+        // var tombolReloadData = document.getElementById("tombolReload");
+        // var tombolReplaceData = document.getElementById("tombolReplace");
+
+        // tombolAssignData.addEventListener("click", function(){
+        //     location.assign("http://www.geogle.com");
+        // })
+        // tombolReloadData.addEventListener("click", function(){
+        //     location.reload();
+        // })
+        // tombolReplaceData.addEventListener("click", function(){
+        //     location.replace("http://www.geogle.com");
+        // })
+
+    </script>
+</body>
+</html>

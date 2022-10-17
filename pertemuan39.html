@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Halaman Utama</h1>
+    <button id="tombol">Click</button>
+    <p>hasil : <span id="hasil"></span></p>
+
+    <script>
+
+        var tombolData = document.getElementById("tombol");
+        var hasilData = document.getElementById("hasil");
+        // var h1Data = document.querySelector("h1");
+
+
+        function jalankanfungsi(){
+            var paham = prompt("Input halaman website anda ");
+            hasilData.innerHTML = paham;
+
+            // if(paham){
+            //     h1Data.innerHTML = "Halaman Error"
+            // }
+        }
+
+        tombolData.addEventListener("click", jalankanfungsi)
+        // function mulai(){
+        //     var tombolData = document.getElementById("tombol");
+        //     var hasilData = document.getElementById("hasil");
+
+        //     function jalankan(){
+        //     hasilData.innerHTML = "Selamat belajar Javascript";
+        //     }
+        //     tombolData.addEventListener("click", jalankan)
+        // }
+        // window.addEventListener("load", mulai)
+
+
+
+        // window.addEventListener("load", function(){
+        //     var tombolData = document.getElementById("tombol");
+        //     var hasilData = document.getElementById("hasil");
+
+        //     function jalankan(){
+        //     hasilData.innerHTML = "Selamat belajar Javascript";
+        //     }
+        //  tombolData.addEventListener("click", jalankan)
+
+        // })
+        
+
+
+        // window.addEventListener("click", function(){
+        //     alert("Selamat anda mendapatkan hadiah")
+        // })
+    </script>
+</body>
+</html>

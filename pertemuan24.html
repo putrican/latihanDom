@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 3px solid black;
+            width: 500px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>Halaman utama</div>
+
+    <script>
+        function mouseoverEvent(e){
+            e.target.style.backgroundColor = "red";
+            e.target.innerHTML = "Berfungsi mouseover";
+
+        }
+        function mouseoutEvent(e){
+            e.target.style.backgroundColor = "yellow";
+            e.target.innerHTML = "Berfungsi mouseout";
+        }
+        function mousedownEvent(e){
+            e.target.style.backgroundColor = "grey";
+            e.target.innerHTML = "Berfungsi mousedown";
+        }
+        function mouseupEvent(e){
+            e.target.style.backgroundColor = "blue";
+            e.target.innerHTML = "Berfungsi mouseup";
+        }
+
+
+        var divData = document.querySelector("div");
+        divData.addEventListener("mouseover",mouseoverEvent);
+        divData.addEventListener("mouseout",mouseoutEvent);
+        divData.addEventListener("mousedown",mousedownEvent);
+        divData.addEventListener("mouseup",mouseupEvent);
+
+    </script>
+    
+</body>
+</html>

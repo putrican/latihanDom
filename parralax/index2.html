@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * { 
+        border: 2px solid #dedede; 
+        padding: 15px; 
+        margin: 15px; 
+    }
+    html { 
+      margin: 0;
+      padding: 0;
+    }
+    body { 
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+    /* #b p {
+      color:green
+    }
+    #b li:nth-child(2){
+      background-color: orange;
+    } */
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/sandhikagalih">Instagram Sandhika Galih</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+          <p>paragraf 4</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+      </section>
+  </div>
+
+<script>
+    //DOM selection
+    //document.getElementById
+    const judul = document.getElementById('judul');
+    judul.style.color  = 'blue';
+    judul.style.backgroundColor = '#ccc';
+    judul.innerHTML = 'Putri Johanna Lubis';
+
+    //document.getElementsByTagName
+    const p = document.getElementsByTagName('p');
+    for( let i = 0; i < p.length; i++){
+        p[i].style.backgroundColor = '#aaa';
+    }
+
+    const h1 = document.getElementsByTagName('h1')[0];
+    h1.style.fontSize = '70px';
+
+    //document.getElementsByClassName
+    const p1 = document.getElementsByClassName('p1')[0];
+    p1.innerHTML = 'ini di ubah dari javascript';
+    p1.style.color = 'red';
+
+    //document.querySelector()->element
+    const p4 = document.querySelector('#b p');
+    p4.style.color = 'green';
+    p4.style.fontSize = '40px';
+
+    const li2 = document.querySelector('#b li:nth-child(2)');
+    li2.style.backgroundColor = 'orange';
+
+    //document.querySelectorAll()
+    const paragraf = document.querySelectorAll('p');
+    for( let i = 0; i < p.length; i++){
+      paragraf[i].style.backgroundColor = 'lightblue';
+    }
+   
+
+
+   
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

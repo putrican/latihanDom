@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="judul">Halaman utama</h1>
+    <p></p>
+    <h3></h3>
+
+    <script>
+
+        function tampilkanP(){
+            document.querySelector("p").innerHTML = "judul1";
+        }
+        function tampilkanH3(){
+            document.querySelector("h3").innerHTML = "judul2";
+        }
+        h1Data = document.getElementById("judul");
+        h1Data.onclick = tampilkanP;
+        // h1Data.onclick = tampilkanH3;
+
+        // var h1Data = document.getElementById("judul");
+
+        // h1Data.onclick = function(){
+        //     document.querySelector("p").innerHTML = "Halaman Masuk"
+        // }
+
+
+
+
+        // function tampilkan(){
+        //     document.querySelector("p").innerHTML = "Halaman content";
+
+        // }
+        // var h1Data = document.getElementById("judul");
+        // h1Data.onclick = tampilkan;
+    </script>
+    
+</body>
+</html>
